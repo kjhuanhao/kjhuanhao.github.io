@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>域名重定向</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://mrhuanhao.cn"/>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/mrhuanhao/cdn/blog/favicon64.png">
+    <link href="https://cdn.jsdelivr.net/gh/kjhuanhao/webcdn@master/301site/301.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column
+        }
+
+        main {
+            flex: 1 0 auto
+        }
+
+        code {
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+        }
+
+        code {
+            padding: 2px 10px;
+            font-size: 1.5rem;
+            color: #f87db8;
+            background-color: #f9f2f4;
+            border-radius: 4px
+        }
+
+        span {
+            font-size: 1.5rem
+        }
+       
+        #card {
+            background-image: url(https://cdn.jsdelivr.net/gh/kjhuanhao/webcdn@master/301site/301.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%
+        }
+
+        a {
+            color: #f06292;
+            transition: all .3s
+        }
+
+        a:hover {
+            filter: brightness(.8)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container" style="margin-top:20px">
+            <div class="row">
+                <div class="col l4 offset-l4 m6 offset-m3 s10 offset-s1">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div id="card" class="card">
+                                <div id="card_image" class="card-image" style="height:320px">
+                                    <div style="position:absolute;bottom:0;right:0"><span
+                                            style="color:#cdcdcd;font-size:.5rem">Pixiv: 65309723</span></div>
+                                </div>
+                                <div class="card-content center-align" style="background-color:#fff"><span
+                                        style="color:#f93995">找不到页面了哟~</span><br><br><code><a id="jump-link" href="https://mrhuanhao.cn/">mrhuanhao.cn</a></code><br><br>
+                                </div>
+                                <div class="progress" style="background-color:#ffb7d9">
+                                    <div id="progress" class="determinate" style="width:0%;background-color:#f93995">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer transparent">
+        <div class="footer-copyright transparent">
+            <div class="container pink-text text-lighten-2 center-align">© Copyright <a href="https://mrhuanhao.cn/"
+                    target="_blank">Huanhao</a></div>
+        </div>
+    </footer>
+    <script>
+        !(function() {
+          var e= "https://mrhuanhao.cn/",
+            t = document.getElementById("card"),
+            n = document.getElementById("card_image"),
+            o = document.getElementById("progress");
+          document.getElementById("jump-link").href = e;
+          var c = 100;
+          function d() {
+            c--,
+              (n.style.height = t.offsetWidth),
+              (o.style.width = (100 - c).toString() + "%"),
+              0 == c && (clearInterval(i), window.location.replace(e));
+          }
+          d();
+          var i = setInterval(function() {
+            d();
+          }, 50);
+        })();
+      </script>
+</body>
+
+</html>

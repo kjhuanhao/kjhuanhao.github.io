@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>manajro-i3wm - Huanhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="manjaro,i3wm">
+  
+  
+    <meta name="description" content="这本来是我的一个视频稿子，但是忽然不想去做了，就放出这个稿子">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/favicon64.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?553d3d44138cad01cf8b0694997bb295";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Huanhao's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/03/23/manjaro-i3/">
+        manajro-i3wm
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://mrhuanhao.cn/" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
+    <p>Huanhao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/i3wm/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>i3wm</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+          
+            
+              <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-20T17:56:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年4月20日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>这本来是我的一个视频稿子，但是忽然不想去做了，就放出这个稿子</p>
+<a id="more"></a>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>这是一期关于manjaro的安装到开发环境配置<code>i3wm</code>的教程.我即将在manjaro_gnome里面演示</p>
+<h2 id="主要的软件或者工具"><a href="#主要的软件或者工具" class="headerlink" title="主要的软件或者工具"></a>主要的软件或者工具</h2><ul>
+<li>i3wm</li>
+<li>tmux</li>
+<li>nvim</li>
+<li>polybar</li>
+<li>compton</li>
+<li>ranger</li>
+<li>rofi</li>
+<li>fish</li>
+<li>alacritty</li>
+</ul>
+<h2 id="展示我的桌面"><a href="#展示我的桌面" class="headerlink" title="展示我的桌面"></a>展示我的桌面</h2><p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/dotfiles/.img/desktop.png" alt="desktop.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/dotfiles/.img/i3.png" alt="i3wm"></p>
+<h1 id="你需要做的"><a href="#你需要做的" class="headerlink" title="你需要做的"></a>你需要做的</h1><p>备份好你自己的文件,开始和我一起安装和配置一个美观实用的开发环境</p>
+<h1 id="安装篇"><a href="#安装篇" class="headerlink" title="安装篇"></a>安装篇</h1><p><strong>Windwos下制作一个启动盘</strong></p>
+<ul>
+<li>事前准备<br>需要一个至少4G以上的U盘<br>1.下载<a href="https://rufus.ie/" target="_blank" rel="noopener">rufus</a><br>2.使用DD写入即可<br>3.重启电脑启动U盘<br><strong>Linux下制作一个启动盘</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo fdisk -l   #查看U盘路径</span><br><span class="line">sudo umount /dev/sdb*   #取消挂载U盘</span><br><span class="line">sudo mkfs.vfat /dev/sdb -I  #格式化U盘</span><br></pre></td></tr></table></figure>
+
+<p>然后用dd命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd if=镜像路径 of=/dev/sdb(启动盘)  #写入镜像</span><br></pre></td></tr></table></figure>
+
+<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><blockquote>
+<ol>
+<li>挂载点/；主分区；安装系统和软件；分区格式为ext4； </li>
+<li>挂载点/home；逻辑分区；相当于“我的文档”； 分区格式ext4 </li>
+<li>swap；逻辑分区；充当虚拟内存；大小可以等于内存大小；分区格式为swap </li>
+<li>/boot ；引导分区；逻辑分区；；分区格式为ext4；</li>
+</ol>
+</blockquote>
+<p>建议第一次装linux的新手去百度了解一下</p>
+<h2 id="安装后的第一件事情"><a href="#安装后的第一件事情" class="headerlink" title="安装后的第一件事情"></a>安装后的第一件事情</h2><ul>
+<li>几乎所有linux你安装完成之后,我们都要进行更换镜像源的操作</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-mirrors -i -c China -m rank  # 选ustc科大镜像源</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>然后进行更新</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syy</span><br><span class="line">sudo pacman -Syyu</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>在/etc/pacman.conf加入</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel = Optional TrustedOnly</span><br><span class="line">Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>导入秘钥</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syy</span><br><span class="line">sudo pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="pacman相关的命令"><a href="#pacman相关的命令" class="headerlink" title="pacman相关的命令"></a>pacman相关的命令</h2><p>pacman用法和介绍: <a href="https://wiki.archlinux.org/index.php/Pacman" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Pacman</a></p>
+<p>pacman视频介绍(来自TheCW): <a href="https://www.bilibili.com/video/av55190132" target="_blank" rel="noopener">https://www.bilibili.com/video/av55190132</a></p>
+<h2 id="其他问题和建议"><a href="#其他问题和建议" class="headerlink" title="其他问题和建议"></a>其他问题和建议</h2><ul>
+<li>如果你系统用的是中文,你还需要安装一个字体,避免中文乱码</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S wqy-microhei</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>新手建议</li>
+</ul>
+<p>解决问题大法:</p>
+<p>遇到软件使用问题看<a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">archwiki</a></p>
+<p>archwiki没有找到,没有关系</p>
+<p>再看github的,对应仓库wiki</p>
+<p>没有找到,没有关系</p>
+<p>看看issues,有没有相同问题</p>
+<p>遇到ERROR,不要着急</p>
+<p>先查<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a>,或者<a href="https://cn.bing.com/" target="_blank" rel="noopener">bing</a></p>
+<p>就算<a href="https://www.google.com/" target="_blank" rel="noopener">谷歌</a>,也没有关系</p>
+<p>仍未解决,切莫放弃</p>
+<p>发个problem,who can help me</p>
+<p>知乎,贴吧,群里也发</p>
+<p>csdn也能考虑</p>
+<p>提问之前必须think</p>
+<p><a href="http://doc.zengrong.net/smart-questions/cn.html" target="_blank" rel="noopener">提问的智慧</a>要牢记</p>
+<p>许多途径切勿放弃!</p>
+<blockquote>
+<p>archwiki: <a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">https://wiki.archlinux.org/</a></p>
+<p>archwiki(中文): <a href="https://wiki.archlinux.org/index.php/Arch_Linux_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Arch_Linux_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></p>
+<p>提问的智慧:<a href="http://doc.zengrong.net/smart-questions/cn.html" target="_blank" rel="noopener">http://doc.zengrong.net/smart-questions/cn.html</a></p>
+<p>遇到找不到的软件包看AUR,这是一个庞大的软件库</p>
+<p>aur:<a href="https://aur.archlinux.org/" target="_blank" rel="noopener">https://aur.archlinux.org/</a></p>
+</blockquote>
+<h1 id="配置篇"><a href="#配置篇" class="headerlink" title="配置篇"></a>配置篇</h1><h2 id="安装fish"><a href="#安装fish" class="headerlink" title="安装fish"></a>安装fish</h2><ul>
+<li>安装fish</li>
+</ul>
+<p><a href="https://fishshell.com/" target="_blank" rel="noopener">https://fishshell.com/</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fish</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看fish位置</li>
+<li>更换fish  chsh -s</li>
+<li>安装oh-my-fish插件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://get.oh-my.fish | fish</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置fish主题</li>
+</ul>
+<h2 id="安装i3"><a href="#安装i3" class="headerlink" title="安装i3"></a>安装i3</h2><p>i3是一个窗口管理器,可以高效管理你的桌面,管理你的窗口,窗口直接可以快速地切换,再配合一些小工具,除了浏览网页之类的,几乎是用不到鼠标,可以大大增加了你的工作效率</p>
+<p>那么如何去安装和使用i3呢?在这之前我来带你安装一下linux</p>
+<p>想要高效就先拥有一个好用的系统,例如archlinux,或者arch的发行版,衍生版</p>
+<p>arch下的aur我觉得几乎是万能的,我从来没有遇过什么软件包不存在这种问题</p>
+<p>我这里就演示如何安装manjaro</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S i3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重启</li>
+<li>选择i3</li>
+</ul>
+<h2 id="安装rofi"><a href="#安装rofi" class="headerlink" title="安装rofi"></a>安装rofi</h2><p>rofi</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S rofi</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>clone 我的仓库dotfiles</li>
+</ul>
+<p><a href="https://github.com/kjhuanhao/dotfiles.git" target="_blank" rel="noopener">https://github.com/kjhuanhao/dotfiles.git</a></p>
+<p>移动配置文件到 ~目录下</p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>建议手动安装,因为脚本是一键式,容易出现部分没有安装问题,不容易差错</p>
+<h2 id="安装tmux和alacrity"><a href="#安装tmux和alacrity" class="headerlink" title="安装tmux和alacrity"></a>安装tmux和alacrity</h2><p>tmux是一个终端复用器,类似GNU Screen</p>
+<p>Alacritty是一个终端模拟器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S tmux alacritty</span><br></pre></td></tr></table></figure>
+
+<p>移动tmux和alacrity的配置文件</p>
+<p>tmux移动到~ 的.tmux.conf下</p>
+<p>移动主题文件到~下</p>
+<h2 id="安装polyabr"><a href="#安装polyabr" class="headerlink" title="安装polyabr"></a>安装polyabr</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S polybar</span><br></pre></td></tr></table></figure>
+
+<p>移动polyabr配置文件</p>
+<p>如果是虚拟机你无法使用我的的polybar配置,只能使用默认的</p>
+<p>可以去看看默认的配置在哪,记得生成laught</p>
+<h2 id="安装nvim"><a href="#安装nvim" class="headerlink" title="安装nvim"></a>安装nvim</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S neovim</span><br></pre></td></tr></table></figure>
+
+<h2 id="移动i3配置文件"><a href="#移动i3配置文件" class="headerlink" title="移动i3配置文件"></a>移动i3配置文件</h2><ul>
+<li>复制</li>
+<li>到.config/i3下修改分辨率加上virual1</li>
+<li>重载i3</li>
+</ul>
+<h2 id="安装compton"><a href="#安装compton" class="headerlink" title="安装compton"></a>安装compton</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S compton</span><br></pre></td></tr></table></figure>
+
+<p>建议去github看官方的安装方式,如果报错那就是缺少依赖</p>
+<h2 id="关于切换键位布局"><a href="#关于切换键位布局" class="headerlink" title="关于切换键位布局"></a>关于切换键位布局</h2><p>在我的配置文件里面有一份colemak的键位布局</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>推荐UP主:TheCW</p>
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://mrhuanhao.cn/2020/03/23/manjaro-i3/>https://mrhuanhao.cn/2020/03/23/manjaro-i3/</a></p>
+          
+        
+          
+            <p>转载时，请注明文章来源！！！</p>
+
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
+        
+          height='160px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/03/23/picgo/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【pic+js+gh】免费高速图床方案</p>
+                <p class='content'>搭建一个自己的免费图床工具
+
+本文用到的工具或网站PicGo
+jsdelivr
+github
+
+速度对比Github的速度：
+
+jsdelivrCDN的速度：
+
+
+下载PicGo首先进入PicG...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/03/23/configvim/'>
+                <p class='title'>【教程向】配置属于自己的vim<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>拥有一个自己的vim配置
+
+新建Vim配置文件Linux
+1mkdir ～/.vimrc
+
+配置常用设置
+
+
+配置
+功能
+
+
+
+set number
+设置行号
+
+
+set systax on
+高...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'manajro-i3wm',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget grid blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation fixed">
+      
+        <a class="flat-box" title="/archives/" href="/archives/"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          归档
+        </a>
+      
+        <a class="flat-box" title="https://huanhao.cnblogs.com/" href="https://huanhao.cnblogs.com/"
+          
+          
+            target="_blank"
+          
+          id="https:huanhaocnblogscom">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          博客园
+        </a>
+      
+        <a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
+          
+          
+            target="_blank"
+          
+          id="https:hexocncn">
+          
+            <i class="fas fa-paperclip fa-fw" aria-hidden="true"></i>
+          
+          Hexo中文
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          友链
+        </a>
+      
+        <a class="flat-box" title="https://space.bilibili.com/67268239" href="https://space.bilibili.com/67268239"
+          
+          
+            target="_blank"
+          
+          id="https:spacebilibilicom67268239">
+          
+            <i class="fas fa-play-circle fa-fw" aria-hidden="true"></i>
+          
+          Bilibili
+        </a>
+      
+        <a class="flat-box" title="/about/" href="/about/"
+          
+          
+            target="_blank"
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget text blur desktop mobile">
+  
+  <header>
+    
+      <a href='https://github.com/kjhuanhao' target="_blank" rel="noopener"><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧！</span></a>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'></p>
+
+    
+      <p>这是我的最新项目: Hexo中文站，您的赞对我来说很重要! 也欢迎新成员加入━(<em>｀∀´</em>)ノ亻!</p>
+
+    
+      <p><a href="https://github.com/kjhuanhao/hexocn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn/hexocn/h128.png" height="50px"></a></p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主要的软件或者工具"><span class="toc-text">主要的软件或者工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#展示我的桌面"><span class="toc-text">展示我的桌面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分区"><span class="toc-text">分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装后的第一件事情"><span class="toc-text">安装后的第一件事情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pacman相关的命令"><span class="toc-text">pacman相关的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他问题和建议"><span class="toc-text">其他问题和建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装fish"><span class="toc-text">安装fish</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装i3"><span class="toc-text">安装i3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装rofi"><span class="toc-text">安装rofi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖"><span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装tmux和alacrity"><span class="toc-text">安装tmux和alacrity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装polyabr"><span class="toc-text">安装polyabr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装nvim"><span class="toc-text">安装nvim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动i3配置文件"><span class="toc-text">移动i3配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装compton"><span class="toc-text">安装compton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于切换键位布局"><span class="toc-text">关于切换键位布局</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:2077780946@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/kjhuanhao/"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=471662004"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://mrhuanhao.cn/">Copyright © 2020 Mr. Huanhao</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/wallhaven-73kzee.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "hDOAA3mu7lwFQdm4dmnv3dns-gzGzoHsz",
+    appKey: "uEgPfcpSWrUpzsYwlyqvHgxY",
+    placeholder: "如果你有什么疑问或者吐槽，快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight: 'true',
+    mathJax: 'false'
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "[object Object]";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+</html>

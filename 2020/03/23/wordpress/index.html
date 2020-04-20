@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>wordpress博客搭建 - Huanhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="WordPress,博客">
+  
+  
+    <meta name="description" content="你好！本网站教程是利用虚拟主机搭建Wordpress个人网站">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/favicon64.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?553d3d44138cad01cf8b0694997bb295";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Huanhao's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/03/23/wordpress/">
+        wordpress博客搭建
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://mrhuanhao.cn/" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
+    <p>Huanhao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>搭建网站</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+          
+            
+              <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-20T17:56:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年4月20日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p><strong>你好！本网站教程是利用虚拟主机搭建Wordpress个人网站</strong></p>
+<a id="more"></a>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>不管您是接触过搭建网站还是没接触过的，只要跟着我的教程就可以成功搭建</p>
+<p>WordPress官网：<a href="https://cn.wordpress.org/" target="_blank" rel="noopener">https://cn.wordpress.org/</a></p>
+<hr>
+<h1 id="购买一个虚拟主机"><a href="#购买一个虚拟主机" class="headerlink" title="购买一个虚拟主机"></a>购买一个虚拟主机</h1><p>我推荐以下几个网址(CNY是人民币)</p>
+<blockquote>
+<p>阿里云：<a href="https://www.aliyun.com/" target="_blank" rel="noopener">https://www.aliyun.com/</a> //最便宜一年187CNY</p>
+<p>腾讯云：<a href="https://cloud.tencent.com/" target="_blank" rel="noopener">https://cloud.tencent.com/</a></p>
+<p>硅云：<a href="https://www.vpsor.cn/aff?affid=46649" target="_blank" rel="noopener">https://www.vpsor.cn/aff?affid=46649</a> //最便宜的是一个月8CNY，建议在硅云买！！！</p>
+<p>西部数码：<a href="https://www.west.cn/" target="_blank" rel="noopener">https://www.west.cn/</a></p>
+<p>亿速互联：<a href="http://www.ysiis.com/" target="_blank" rel="noopener">http://www.ysiis.com/</a> //建议买独立ip一年118CNY</p>
+</blockquote>
+<p>PS：如果只是用来写写东西，做个小网站宣传自己什么的，用便宜的主机就可以了，建议在硅云和亿速互联买香港虚拟主机</p>
+<p>如果你是商业用途，例如公司之类的建议在阿里云和腾讯云买</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">购买国内的主机是需要公安局备案的，如果是购买香港或者美国等虚拟主机，无需备案也无需实名认证</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据库MySQL"><a href="#数据库MySQL" class="headerlink" title="数据库MySQL"></a>数据库MySQL</h2><p>PS：如果你是在亿速互联或者硅云买的话是送数据库的，这样就省去买数据库的烦恼了，其他的我不了解，请自行体验</p>
+<p>建议是用赠送数据库的网站，不然就自己去购买或者搭建本地数据库</p>
+<hr>
+<h1 id="购买一个域名和解析域名"><a href="#购买一个域名和解析域名" class="headerlink" title="购买一个域名和解析域名"></a>购买一个域名和解析域名</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>你可以用上面的推荐网址购买域名</p>
+<blockquote>
+<p>阿里云：<a href="https://www.aliyun.com/" target="_blank" rel="noopener">https://www.aliyun.com/</a> //需要实名认证</p>
+<p>腾讯云：<a href="https://cloud.tencent.com/" target="_blank" rel="noopener">https://cloud.tencent.com/</a> //.xyz新用户只要9CNY/需要实名认证</p>
+<p>硅云：<a href="https://www.vpsor.cn/" target="_blank" rel="noopener">https://www.vpsor.cn/</a> //可以说是我见过最便宜的域名网站/需要实名认证</p>
+<p>西部数码：<a href="https://www.west.cn/" target="_blank" rel="noopener">https://www.west.cn/</a> //需要实名认证</p>
+<p>亿速互联：<a href="http://www.ysiis.com/" target="_blank" rel="noopener">http://www.ysiis.com/</a> //这个也便宜/需要实名认证</p>
+<p>新网：<a href="http://www.xinnet.com/" target="_blank" rel="noopener">http://www.xinnet.com/</a> //这个厉害了，完成实名认证，域名免费送</p>
+<p>Freenom：<a href="https://www.freenom.com/" target="_blank" rel="noopener">https://www.freenom.com/</a> //国外域名网站，无需实名认证，免费12个月</p>
+<p>Namesilo：<a href="https://www.namesilo.com/" target="_blank" rel="noopener">https://www.namesilo.com/</a> //国外域名网站，无需实名认证，优惠码：okoff 或者 go2think</p>
+</blockquote>
+<p>PS：这些网站的域名都很便宜，随便挑选</p>
+<p>建议硅云：</p>
+<p><a href="http://img.hb.aicdn.com/2566a504d9ffb741c3e54a66aa7ad21ae30825f3ead7-7cNq3a_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/2566a504d9ffb741c3e54a66aa7ad21ae30825f3ead7-7cNq3a_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/2566a504d9ffb741c3e54a66aa7ad21ae30825f3ead7-7cNq3a_fw658" target="_blank" rel="noopener">img</a></p>
+<hr>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p>拥有了自己的虚拟主机和域名之后我们需要解析域名，通俗来说就是让这个域名地址可以访问你的网站</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在解析域名之前，如果你是用国内网站买的域名你需要过户或者实名认证，否则无法访问你的网站</span><br></pre></td></tr></table></figure>
+
+<p>打开域名的控制面板</p>
+<p>点击解析</p>
+<p>添加记录</p>
+<p><a href="http://img.hb.aicdn.com/5a694a4a9d3996483e4eb203ec4d99864da1c3797775-S6bRHS_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/5a694a4a9d3996483e4eb203ec4d99864da1c3797775-S6bRHS_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/5a694a4a9d3996483e4eb203ec4d99864da1c3797775-S6bRHS_fw658" target="_blank" rel="noopener">img</a></p>
+<blockquote>
+<p>主机记录：www和@</p>
+<p>记录类型：A记录</p>
+<p>记录值：填写你虚拟主机的ip地址 //虚拟主机控制面板可以查看，不知道的话问客服</p>
+<p>优先级：若虚拟主机无要求就默认</p>
+<p>线路类型：若虚拟主机无要求就默认</p>
+<p>TTL：若虚拟主机无要求就默认</p>
+</blockquote>
+<p>我们要添加两个解析，www和@，和我上图一样就可以了</p>
+<h2 id="虚拟机域名绑定"><a href="#虚拟机域名绑定" class="headerlink" title="虚拟机域名绑定"></a>虚拟机域名绑定</h2><p>打开虚拟机控制面板</p>
+<p>找到绑定域名的入口</p>
+<p><a href="http://img.hb.aicdn.com/961d1269a7eb58414682389c4747141603ebe2022873-YIzfBs_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/961d1269a7eb58414682389c4747141603ebe2022873-YIzfBs_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/961d1269a7eb58414682389c4747141603ebe2022873-YIzfBs_fw658" target="_blank" rel="noopener">img</a></p>
+<p>输入你的域名地址</p>
+<blockquote>
+<p>格式：www + 你的域名地址</p>
+</blockquote>
+<p>点击绑定即可</p>
+<hr>
+<h1 id="下载WordPress文件"><a href="#下载WordPress文件" class="headerlink" title="下载WordPress文件"></a>下载WordPress文件</h1><blockquote>
+<p>官网最新版下载地址：<a href="https://cn.wordpress.org/download/" target="_blank" rel="noopener">https://cn.wordpress.org/download/</a></p>
+<p>5.0.3百度云下载地址： <a href="https://pan.baidu.com/s/1fLDzge_Z4hXXhTTs4Iu_AA" target="_blank" rel="noopener">https://pan.baidu.com/s/1fLDzge_Z4hXXhTTs4Iu_AA</a> 提取码: iqgr</p>
+<p>5.0.3高速下载地址：<a href="https://www.lanzous.com/i3iquna" target="_blank" rel="noopener">https://www.lanzous.com/i3iquna</a> //网速慢的伙伴可以选择此链接</p>
+</blockquote>
+<hr>
+<h1 id="上传WordPress文件到虚拟主机"><a href="#上传WordPress文件到虚拟主机" class="headerlink" title="上传WordPress文件到虚拟主机"></a>上传WordPress文件到虚拟主机</h1><p>不同的网站虚拟主机的文件上传方式都不一样，但通用的都是用FTP文件传输</p>
+<p>如果你所购买的主机支持在线FTP那你可以直接用在线上传</p>
+<hr>
+<h2 id="上传方式一：FTP上传"><a href="#上传方式一：FTP上传" class="headerlink" title="上传方式一：FTP上传"></a>上传方式一：FTP上传</h2><p>我们需要用到一个软件“Filezilla”</p>
+<blockquote>
+<p>下载地址：<a href="https://www.filezilla.cn/" target="_blank" rel="noopener">https://www.filezilla.cn/</a></p>
+</blockquote>
+<p>下载后打开软件，我们需要输入以下信息,这些信息都可以在虚拟主机信息或者控制面板查找</p>
+<p>如果你不清楚，可以询问网站的客服</p>
+<p>不同的网站主机上传文件的方式不同，有的是需要上传到固定文件夹的，我们可以在网站里面找一下，例如我的是需要上传到web目录下</p>
+<p><a href="http://img.hb.aicdn.com/3275a87bd4d320efba2629695c8409a630da4b881dea9-NCwkmX_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/3275a87bd4d320efba2629695c8409a630da4b881dea9-NCwkmX_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/3275a87bd4d320efba2629695c8409a630da4b881dea9-NCwkmX_fw658" target="_blank" rel="noopener">img</a></p>
+<p>如果右边的站点出现文件夹代表链接成功，软件也会提示的</p>
+<p><a href="http://img.hb.aicdn.com/a2f7f0673a882278c0bfee61247f2abf8c5bf0da19a1e-5eOjJ0_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/a2f7f0673a882278c0bfee61247f2abf8c5bf0da19a1e-5eOjJ0_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/a2f7f0673a882278c0bfee61247f2abf8c5bf0da19a1e-5eOjJ0_fw658" target="_blank" rel="noopener">img</a></p>
+<p>把左边的文件拖到右边就会自动上传了，我们需要将WordPress目录下的所有文件都上传到主机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：不同的网站主机上传文件的方式不同，有的是需要上传到固定文件夹的，在上传之前一定要看主机上传文件说明，这个说明一般网站都会有，可能在问题中心里面</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="上传方式二：在线FTP"><a href="#上传方式二：在线FTP" class="headerlink" title="上传方式二：在线FTP"></a>上传方式二：在线FTP</h2><p>我们需要进入主机的控制面板，找到类似可以管理虚拟文件的入口，比如在线FTP</p>
+<p>不同的网站主机上传文件的方式不同，有的是需要上传到固定文件夹的，我们可以在网站里面找一下，例如我的是需要上传到web目录下</p>
+<p><a href="http://img.hb.aicdn.com/cfdb50788da9e0b46f8e9d06a02f7bee2d26b6392258a-MRUQrM_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/cfdb50788da9e0b46f8e9d06a02f7bee2d26b6392258a-MRUQrM_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/cfdb50788da9e0b46f8e9d06a02f7bee2d26b6392258a-MRUQrM_fw658" target="_blank" rel="noopener">img</a></p>
+<p>先上传WordPress文件的压缩包，上传之后选择在线解压解压到当前目录即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：不同的网站主机上传文件的方式不同，有的是需要上传到固定文件夹的，在上传之前一定要看主机上传文件说明，这个说明一般网站都会有，可能在问题中心里面</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h1><h2 id="输入MySQL数据库信息"><a href="#输入MySQL数据库信息" class="headerlink" title="输入MySQL数据库信息"></a>输入MySQL数据库信息</h2><p>现在你可以打开你的网站地址，会自动跳转到配置界面，如果没有自动跳转请打开下面的网址</p>
+<blockquote>
+<p>你的网站地址 + /wp-admin/install.php</p>
+<p>//如果还是没有，你需要检查域名解析是否成功，然后检查文件是否正确上传到虚拟主机的指定目录</p>
+</blockquote>
+<p>你会进入这个界面</p>
+<p><a href="http://img.hb.aicdn.com/bff0162eb4c0a90986094dd5235577956b31e93e12fd5-iZ3HSb_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/bff0162eb4c0a90986094dd5235577956b31e93e12fd5-iZ3HSb_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/bff0162eb4c0a90986094dd5235577956b31e93e12fd5-iZ3HSb_fw658" target="_blank" rel="noopener">img</a></p>
+<p>你需要到虚拟主机赠送的数据库查看图片中的信息，数据库名、用户名、密码等</p>
+<p>如果你购买的虚拟主机没有赠送数据库，那你就要去买一个或者自己搭建本地数据库（不提供搭建本地数据库教程）</p>
+<hr>
+<p>点击开始</p>
+<p><a href="http://img.hb.aicdn.com/69db0179ef5b8759b2a5507b4f965e8bf6857950142f1-pkQDcs_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/69db0179ef5b8759b2a5507b4f965e8bf6857950142f1-pkQDcs_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/69db0179ef5b8759b2a5507b4f965e8bf6857950142f1-pkQDcs_fw658" target="_blank" rel="noopener">img</a></p>
+<p>请按照你的数据库信息填写</p>
+<hr>
+<p>点击提交</p>
+<p><a href="http://img.hb.aicdn.com/9f0e93446881cc278602bc17a3b2350b6319ba0d5bc2-ao6Uhl_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/9f0e93446881cc278602bc17a3b2350b6319ba0d5bc2-ao6Uhl_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/9f0e93446881cc278602bc17a3b2350b6319ba0d5bc2-ao6Uhl_fw658" target="_blank" rel="noopener">img</a></p>
+<hr>
+<h2 id="配置网站信息"><a href="#配置网站信息" class="headerlink" title="配置网站信息"></a>配置网站信息</h2><p>点击安装</p>
+<p><a href="http://img.hb.aicdn.com/abff900ed58bfb07b467c307e64e46e67bf4265a11d94-DHQ05w_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/abff900ed58bfb07b467c307e64e46e67bf4265a11d94-DHQ05w_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/abff900ed58bfb07b467c307e64e46e67bf4265a11d94-DHQ05w_fw658" target="_blank" rel="noopener">img</a></p>
+<p>此刻你需要输入你的网站信息，可以自定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意保存好你的密码</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>点击安装WordPress</p>
+<p><a href="http://img.hb.aicdn.com/83148a4e34ccad1c492f26745d2c63e402eb9a11497f-Rye4DJ_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/83148a4e34ccad1c492f26745d2c63e402eb9a11497f-Rye4DJ_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/83148a4e34ccad1c492f26745d2c63e402eb9a11497f-Rye4DJ_fw658" target="_blank" rel="noopener">img</a></p>
+<p>恭喜你！出现这个界面代表搭建成功</p>
+<hr>
+<h2 id="访问网站"><a href="#访问网站" class="headerlink" title="访问网站"></a>访问网站</h2><p>访问自己的网站就会是这个界面了</p>
+<p><a href="http://img.hb.aicdn.com/f2fb932a1d860a6ab82d1c2c4765e05a899ee2d7dd82-jrR0zI_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/f2fb932a1d860a6ab82d1c2c4765e05a899ee2d7dd82-jrR0zI_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/f2fb932a1d860a6ab82d1c2c4765e05a899ee2d7dd82-jrR0zI_fw658" target="_blank" rel="noopener">img</a></p>
+<p>这个界面是不是不好看，我们辛辛苦苦搭建的WordPress居然是这样的，我告诉你其实我们可以用主题美化</p>
+<hr>
+<h1 id="美化WordPress网站"><a href="#美化WordPress网站" class="headerlink" title="美化WordPress网站"></a>美化WordPress网站</h1><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>推荐两个主题下载地址</p>
+<blockquote>
+<p>WordPress官网：<a href="https://cn.wordpress.org/themes/" target="_blank" rel="noopener">https://cn.wordpress.org/themes/</a> //官网所有主题都在这了</p>
+<p>Kratos-pjax：<a href="https://www.fczbl.vip/" target="_blank" rel="noopener">https://www.fczbl.vip/</a> //一个二次元主题</p>
+</blockquote>
+<p>你也可以自行百度或者谷歌一下其他好看的主题</p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>我们要进入这个网址</p>
+<blockquote>
+<p>你的网址地址 + /wp-admin</p>
+</blockquote>
+<p>这个就是你网站的管理界面，也就是后端</p>
+<p>然后你会看到这个登入</p>
+<p><a href="http://img.hb.aicdn.com/df45750e2193ce49dea5ca4bf646025732ba007b518d-kkZzHC_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/df45750e2193ce49dea5ca4bf646025732ba007b518d-kkZzHC_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/df45750e2193ce49dea5ca4bf646025732ba007b518d-kkZzHC_fw658" target="_blank" rel="noopener">img</a></p>
+<p>这个就是我们在安装WordPress的时候，配置的用户名和密码</p>
+<p>输入然后点击登入就可以了</p>
+<hr>
+<p>这个就是我们的后台界面</p>
+<p><a href="http://img.hb.aicdn.com/240d1a5f260ef2b40259e472c76ef7752f04055f1a9be-wApzwd_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/240d1a5f260ef2b40259e472c76ef7752f04055f1a9be-wApzwd_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/240d1a5f260ef2b40259e472c76ef7752f04055f1a9be-wApzwd_fw658" target="_blank" rel="noopener">img</a></p>
+<p>有个最新版本建议不要更新，因为最新版本是英文的</p>
+<p>我们点击右边的外观</p>
+<p>点击添加</p>
+<p><a href="http://img.hb.aicdn.com/42e5073a1e52f452ae0f0039f87779883ab71c903d9a1-RCm5h5_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/42e5073a1e52f452ae0f0039f87779883ab71c903d9a1-RCm5h5_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/42e5073a1e52f452ae0f0039f87779883ab71c903d9a1-RCm5h5_fw658" target="_blank" rel="noopener">img</a></p>
+<hr>
+<p>然后我们上传下载好的主题压缩包，点击上传主题</p>
+<p><a href="http://img.hb.aicdn.com/2584a13648e855600066677a8b4fdc68943047386abac-i2ylND_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/2584a13648e855600066677a8b4fdc68943047386abac-i2ylND_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/2584a13648e855600066677a8b4fdc68943047386abac-i2ylND_fw658" target="_blank" rel="noopener">img</a></p>
+<p>选择文件，点击安装</p>
+<p><a href="http://img.hb.aicdn.com/cbe80a2c2a013a81ad40df49092659e0a7b903e83bbec-we2M3g_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/cbe80a2c2a013a81ad40df49092659e0a7b903e83bbec-we2M3g_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/cbe80a2c2a013a81ad40df49092659e0a7b903e83bbec-we2M3g_fw658" target="_blank" rel="noopener">img</a></p>
+<p>PS：在添加主题这里，下面有官网提供的一些主题大家可也以选择安装，而且这是在线安装的很简单</p>
+<p>我们可以查看左下角有进度条</p>
+<p><a href="http://img.hb.aicdn.com/24322072d93f598f9eb92f96356f75b35d2125413c63a-qHdaUl_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/24322072d93f598f9eb92f96356f75b35d2125413c63a-qHdaUl_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/24322072d93f598f9eb92f96356f75b35d2125413c63a-qHdaUl_fw658" target="_blank" rel="noopener">img</a></p>
+<p>上传成功显示如图：</p>
+<p><a href="http://img.hb.aicdn.com/ff5f670e5308b09125ce07473db51d1468abdddef15a-uP3Ne8_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/ff5f670e5308b09125ce07473db51d1468abdddef15a-uP3Ne8_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/ff5f670e5308b09125ce07473db51d1468abdddef15a-uP3Ne8_fw658" target="_blank" rel="noopener">img</a></p>
+<p>我们需要点击启用，让主题生效</p>
+<p><a href="http://img.hb.aicdn.com/e92aebd4399f615dc6e60892ba07bec4807d3d11fd01-qxCtMc_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/e92aebd4399f615dc6e60892ba07bec4807d3d11fd01-qxCtMc_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/e92aebd4399f615dc6e60892ba07bec4807d3d11fd01-qxCtMc_fw658" target="_blank" rel="noopener">img</a></p>
+<blockquote>
+<p>免费主题下载地址：<a href="http://www.2zzt.com/" target="_blank" rel="noopener">http://www.2zzt.com/</a></p>
+</blockquote>
+<hr>
+<h2 id="主题进阶设置"><a href="#主题进阶设置" class="headerlink" title="主题进阶设置"></a>主题进阶设置</h2><p>发现主题不能随心所欲怎么办，我教你为所…</p>
+<p>咳咳！在外观下有个主题设置，进去就可以随心设置了</p>
+<p><a href="http://img.hb.aicdn.com/4f7ea712e4cddf6c48c95e6b7089df44adc523b815e27-obl7hM_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/4f7ea712e4cddf6c48c95e6b7089df44adc523b815e27-obl7hM_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/4f7ea712e4cddf6c48c95e6b7089df44adc523b815e27-obl7hM_fw658" target="_blank" rel="noopener">img</a></p>
+<p>可以通过访问自己网址，看看是否生效（每次设置都要点保存哦！）</p>
+<p><a href="http://img.hb.aicdn.com/2e1d66cf38a55f82c1ee21e985e3292b3bd2f13f76c6d-4FGtvx_fw658" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://img.hb.aicdn.com/2e1d66cf38a55f82c1ee21e985e3292b3bd2f13f76c6d-4FGtvx_fw658" alt="img"></a></p>
+<p><a href="http://img.hb.aicdn.com/2e1d66cf38a55f82c1ee21e985e3292b3bd2f13f76c6d-4FGtvx_fw658" target="_blank" rel="noopener">img</a></p>
+<p>我已经不再是那个白白的界面了</p>
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://mrhuanhao.cn/2020/03/23/wordpress/>https://mrhuanhao.cn/2020/03/23/wordpress/</a></p>
+          
+        
+          
+            <p>转载时，请注明文章来源！！！</p>
+
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
+        
+          height='160px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/03/23/gitssh/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>git秘钥生成</p>
+                <p class='content'>前言git使用https协议，每次pull,push都要输入密码，使用git协议，使用ssh秘钥，可以省去每次输密码
+大概需要三个步骤：
+一、本地生成密钥对；
+二、设置github上的公钥；
+三...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/03/23/aria2/'>
+                <p class='title'>【自己的下载平台】搭建aria2网站<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>本文章将带你搭建一个自己的服务器下载平台:aria2
+
+前言本文章将带你搭建一个自己的服务器下载平台:aria2,它的用途是什么?
+下载用途
+百度网盘
+普通文件
+迅雷种子
+等等
+
+准备工具
+服务...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'wordpress博客搭建',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget grid blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation fixed">
+      
+        <a class="flat-box" title="/archives/" href="/archives/"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          归档
+        </a>
+      
+        <a class="flat-box" title="https://huanhao.cnblogs.com/" href="https://huanhao.cnblogs.com/"
+          
+          
+            target="_blank"
+          
+          id="https:huanhaocnblogscom">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          博客园
+        </a>
+      
+        <a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
+          
+          
+            target="_blank"
+          
+          id="https:hexocncn">
+          
+            <i class="fas fa-paperclip fa-fw" aria-hidden="true"></i>
+          
+          Hexo中文
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          友链
+        </a>
+      
+        <a class="flat-box" title="https://space.bilibili.com/67268239" href="https://space.bilibili.com/67268239"
+          
+          
+            target="_blank"
+          
+          id="https:spacebilibilicom67268239">
+          
+            <i class="fas fa-play-circle fa-fw" aria-hidden="true"></i>
+          
+          Bilibili
+        </a>
+      
+        <a class="flat-box" title="/about/" href="/about/"
+          
+          
+            target="_blank"
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget text blur desktop mobile">
+  
+  <header>
+    
+      <a href='https://github.com/kjhuanhao' target="_blank" rel="noopener"><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧！</span></a>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'></p>
+
+    
+      <p>这是我的最新项目: Hexo中文站，您的赞对我来说很重要! 也欢迎新成员加入━(<em>｀∀´</em>)ノ亻!</p>
+
+    
+      <p><a href="https://github.com/kjhuanhao/hexocn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn/hexocn/h128.png" height="50px"></a></p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库MySQL"><span class="toc-text">数据库MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#购买域名"><span class="toc-text">购买域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解析域名"><span class="toc-text">解析域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟机域名绑定"><span class="toc-text">虚拟机域名绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传方式一：FTP上传"><span class="toc-text">上传方式一：FTP上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传方式二：在线FTP"><span class="toc-text">上传方式二：在线FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输入MySQL数据库信息"><span class="toc-text">输入MySQL数据库信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置网站信息"><span class="toc-text">配置网站信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问网站"><span class="toc-text">访问网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载主题"><span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装主题"><span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题进阶设置"><span class="toc-text">主题进阶设置</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:2077780946@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/kjhuanhao/"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=471662004"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://mrhuanhao.cn/">Copyright © 2020 Mr. Huanhao</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/wallhaven-73kzee.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "hDOAA3mu7lwFQdm4dmnv3dns-gzGzoHsz",
+    appKey: "uEgPfcpSWrUpzsYwlyqvHgxY",
+    placeholder: "如果你有什么疑问或者吐槽，快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight: 'true',
+    mathJax: 'false'
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "[object Object]";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+</html>

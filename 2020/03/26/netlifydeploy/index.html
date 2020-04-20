@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>netlify部署博客 - Huanhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="hexo,netlify">
+  
+  
+    <meta name="description" content="今天发现github的pages服务居然炸了，不知道谁干的，所以我将目光放到了netlify，以前就早有耳闻，好像速度会比github快，我也不知道是不是，我主要是为了双线部署，解决移动宽带不能访问我博客的原因。不管如何，本篇文章教你如何使用netlify部署你的博客。">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/favicon64.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?553d3d44138cad01cf8b0694997bb295";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Huanhao's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/03/26/netlifydeploy/">
+        netlify部署博客
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://mrhuanhao.cn/" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
+    <p>Huanhao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/netlify/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>netlify</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+          
+            
+              <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-20T17:56:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年4月20日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>今天发现github的pages服务居然炸了，不知道谁干的，所以我将目光放到了netlify，以前就早有耳闻，好像速度会比github快，我也不知道是不是，我主要是为了双线部署，解决移动宽带不能访问我博客的原因。不管如何，本篇文章教你如何使用netlify部署你的博客。</p>
+<a id="more"></a>
+
+<h1 id="登入Netlify"><a href="#登入Netlify" class="headerlink" title="登入Netlify"></a>登入Netlify</h1><p><btn center large><a href="https://netlify.com/" target="_blank" rel="noopener"><i class='fas fa-paperclip'></i> Netlify官网</a></btn></p>
+<p>直接使用你的github账号就可以了，如果无法访问这个网站，那你可能需要挂梯。</p>
+<h1 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h1><p>我使用的是<code>hexo</code>所以直接按照以往部署的方式即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>你无需更改hexo的任何配置，只需要使用这个命令先部署到github。</p>
+<p>如果你使用的是其他静态程序，只需要和你以前一样，先部署到github即可。</p>
+<h1 id="创建站点"><a href="#创建站点" class="headerlink" title="创建站点"></a>创建站点</h1><p>点击<code>New site from Git</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/image.nmixi5bdals.png" alt="image"></p>
+<p>然后选择Github</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-23-53.png" alt="image"></p>
+<p>允许登入后，直接选择你要部署的仓库</p>
+<h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>之后等待部署，会给你跳到一个页面，如图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-25-59.png" alt="image"></p>
+<p>有一个带netlify的域名，也就是你目前唯一的一个域名，你需要把netlify给你的域名进行解析，使用<code>CNAME</code>记录类型，和你解析github的网站一样。</p>
+<p>至于如何解析，我这里就不教了。</p>
+<p>然后点击<code>Add domian alias</code>添加你的域名，刷新一下，如果域名变绿色就是解析成功了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-31-57.png" alt="image"></p>
+<h1 id="使用HTTPS"><a href="#使用HTTPS" class="headerlink" title="使用HTTPS"></a>使用HTTPS</h1><p>你可以使用官方为你提供的HTTPS证书，但是要做一些配置，我这里直接使用我自己的证书。</p>
+<p>免费证书可以到腾讯云申请。</p>
+<ul>
+<li>先下载你的证书文件</li>
+</ul>
+<p>解压后，可以看到如下文件</p>
+<p>我们只需要<code>Apache</code>目录下的证书文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-36-03.png" alt="image"></p>
+<p>在HTTPS这里，下面应该有两个按钮，因为我已经绑过域名了，所以和你们显示的不一样</p>
+<p>我们选择HTTPS下面的第二个按钮即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-38-46.png" alt="image"></p>
+<ul>
+<li>把带有域名并以<code>crt</code>结尾的证书文件，复制粘贴到下面的第一个框</li>
+<li>把带有域名以<code>key</code>结尾的文件内容，复制粘贴到第二个框</li>
+<li>把带有<code>bundle</code>的文件内容，复制粘贴到第三个框</li>
+<li>最后选择install就可以了</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-36-18.png" alt="image"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-38-08.png" alt="image"></p>
+<p>完成后如下图显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/screenshot2020-03-26_19-38-46.png" alt="image"></p>
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://mrhuanhao.cn/2020/03/26/netlifydeploy/>https://mrhuanhao.cn/2020/03/26/netlifydeploy/</a></p>
+          
+        
+          
+            <p>转载时，请注明文章来源！！！</p>
+
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
+        
+          height='160px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/03/28/solvepicnet/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【完美解决】picgo上传各种失败问题</p>
+                <p class='content'>最近我听说typora可以和picgo一起使用了，于是我就去使用了一下，我发现是真滴香啊
+不过用了没多久，还是老毛病，又是一些奇奇怪怪的问题，应该是墙的问题，于是我又是找到了一个项目，可以帮助你...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/03/25/emailreply/'>
+                <p class='title'>Valine评论系统邮件提醒<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>这几天想到，别人给我发的评论，我还要到后台去看，实在是太麻烦了，于是发现了一个好项目valine-admin可以帮我发送邮件评论提醒，这样我就可以实时收到别人给我发的评论。
+
+项目地址
+
+
+本文...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'netlify部署博客',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget grid blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation fixed">
+      
+        <a class="flat-box" title="/archives/" href="/archives/"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          归档
+        </a>
+      
+        <a class="flat-box" title="https://huanhao.cnblogs.com/" href="https://huanhao.cnblogs.com/"
+          
+          
+            target="_blank"
+          
+          id="https:huanhaocnblogscom">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          博客园
+        </a>
+      
+        <a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
+          
+          
+            target="_blank"
+          
+          id="https:hexocncn">
+          
+            <i class="fas fa-paperclip fa-fw" aria-hidden="true"></i>
+          
+          Hexo中文
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          友链
+        </a>
+      
+        <a class="flat-box" title="https://space.bilibili.com/67268239" href="https://space.bilibili.com/67268239"
+          
+          
+            target="_blank"
+          
+          id="https:spacebilibilicom67268239">
+          
+            <i class="fas fa-play-circle fa-fw" aria-hidden="true"></i>
+          
+          Bilibili
+        </a>
+      
+        <a class="flat-box" title="/about/" href="/about/"
+          
+          
+            target="_blank"
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget text blur desktop mobile">
+  
+  <header>
+    
+      <a href='https://github.com/kjhuanhao' target="_blank" rel="noopener"><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧！</span></a>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'></p>
+
+    
+      <p>这是我的最新项目: Hexo中文站，您的赞对我来说很重要! 也欢迎新成员加入━(<em>｀∀´</em>)ノ亻!</p>
+
+    
+      <p><a href="https://github.com/kjhuanhao/hexocn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn/hexocn/h128.png" height="50px"></a></p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:2077780946@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/kjhuanhao/"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=471662004"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://mrhuanhao.cn/">Copyright © 2020 Mr. Huanhao</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/wallhaven-73kzee.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "hDOAA3mu7lwFQdm4dmnv3dns-gzGzoHsz",
+    appKey: "uEgPfcpSWrUpzsYwlyqvHgxY",
+    placeholder: "如果你有什么疑问或者吐槽，快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight: 'true',
+    mathJax: 'false'
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "[object Object]";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+</html>

@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>【桌面篇】ArchLinux安装kde桌面 - Huanhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="kde,archlinux,linux">
+  
+  
+    <meta name="description" content="为你的arch安装kde桌面">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/favicon64.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?553d3d44138cad01cf8b0694997bb295";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Huanhao's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://picup.mrhuanhao.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:picupmrhuanhaocn"
+                  >
+                  <i class='fas fa-image fa-fw'></i>Github图床
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://hexocn.cn/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:hexocncn"
+                  >
+                  <i class='fas fa-paperclip fa-fw'></i>Hexo中文站
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>技术交流群
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://www.cnblogs.com/huanhao/
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:wwwcnblogscomhuanhao"
+                  >
+                  <i class='fas fa-book fa-fw'></i>博客园
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="flat-box" href=https://msg.cnblogs.com/send/huanhao
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:msgcnblogscomsendhuanhao"
+                  >
+                  <i class='fas fa-envelope fa-fw'></i>有疑问？
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/03/23/archlinuxdesktop/">
+        【桌面篇】ArchLinux安装kde桌面
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://mrhuanhao.cn/" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
+    <p>Huanhao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/linux/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>linux</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+          
+            
+              <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-20T17:56:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年4月20日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>为你的arch安装kde桌面</p>
+<a id="more"></a>
+<h1 id="ArchLinux安装配置手册-桌面篇"><a href="#ArchLinux安装配置手册-桌面篇" class="headerlink" title="ArchLinux安装配置手册[桌面篇]"></a>ArchLinux安装配置手册[桌面篇]</h1><p>现在你的U盘可以拔掉了，重启后会发现和刚刚没什么区别，还是命令行的界面，别着急现在就带你安装桌面环境。</p>
+<h2 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h2><p>首先检查一下网络是否连接成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<p>如果没有那就执行下面的命令连接，相信你知道怎么连接。</p>
+<ul>
+<li>有线网络</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dhcpcd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>无线网络</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wifi-menu</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h1><p>如果这里不添加，安装完桌面后，登录界面没有用户出现(root用户不会出现在gdm登录界面)</p>
+<p>而且使用root权限会有危险</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -g users -s /bin/bash xxxx <span class="comment">#添加xxxx用户，用户名你自定义</span></span><br><span class="line">passwd xxxx <span class="comment">#为xxxx用户设置密码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置新用户的sudo权限"><a href="#配置新用户的sudo权限" class="headerlink" title="配置新用户的sudo权限"></a>配置新用户的sudo权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers <span class="comment">#编辑配置文件</span></span><br></pre></td></tr></table></figure>
+
+<p> 在<code>root ALL = (ALL) ALL</code>下添加<code>xxxx ALL = (ALL) ALL</code>;输入<code>:wq!</code>强制保存退出vim </p>
+<hr>
+<h1 id="安装声卡驱动"><a href="#安装声卡驱动" class="headerlink" title="安装声卡驱动"></a>安装声卡驱动</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S alsa-utils pulseaudio-alsa</span><br></pre></td></tr></table></figure>
+
+<p>Arch Linux默认开启了声音支持，默认静音 可通过<code>alsamixer</code>命令＋字母[M] 取消静音</p>
+<blockquote>
+<p>方向键上下调节音量 字母[M]取消静音 [Q],[W],[E] 增大 左,右,通道 的音量 [Z],[X],[C] 减小 左,右,通道 的音量</p>
+</blockquote>
+<hr>
+<h1 id="安装显卡驱动"><a href="#安装显卡驱动" class="headerlink" title="安装显卡驱动"></a>安装显卡驱动</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lspci | grep VGA    <span class="comment">#查看显卡型号(例如：Intel Corporation HD Graphics 530)</span></span><br><span class="line">00:02.0 VGA compatible controller: Intel Corporation HD Graphics 530 (rev 06)   </span><br><span class="line">lspci | grep 3D     <span class="comment">#查看独显型号(例如：NVIDIA Corporation GM107M [GeForce GTX 950M])</span></span><br><span class="line">01:00.0 3D controller: NVIDIA Corporation GM107M [GeForce GTX 950M] (rev a2)    <span class="comment">#(rev a2) 表示正在运行，如果是ff则未运行</span></span><br><span class="line"></span><br><span class="line">pacman -S 驱动包名字</span><br></pre></td></tr></table></figure>
+
+<p> 参照下图根据你的显卡类型，选择相应驱动包 </p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xf86-video-intel    <span class="comment">#——Intel</span></span><br><span class="line">xf86-video-nouveau  <span class="comment">#——Geforce7</span></span><br><span class="line">xf86-video-304xx <span class="comment">#——Geforce6/7</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="显卡类型"><a href="#显卡类型" class="headerlink" title="显卡类型"></a>显卡类型</h3><p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="http://ww1.sinaimg.cn/large/006kWbIogy1g18tjl32sqj30qj09qjsg.jpg" alt="显卡类型"> 如果你还有独显<code>NVIDIA</code>可以使用,可以一并安装<code>pacman -S xf86-video-intel nvidia</code> </p>
+<blockquote>
+<p>双显卡这里不提出方案，请查阅<a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch wiki</a></p>
+</blockquote>
+<hr>
+<h1 id="安装X窗口系统"><a href="#安装X窗口系统" class="headerlink" title="安装X窗口系统"></a>安装X窗口系统</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xorg <span class="comment">#安装xorg</span></span><br><span class="line">pacman -S xf86-input-synaptics <span class="comment">#安装触摸板驱动</span></span><br><span class="line">pacman -S ttf-dejavu wqy-zenhei wqy-microhei    <span class="comment">#安装常用字体</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装桌面"><a href="#安装桌面" class="headerlink" title="安装桌面"></a>安装桌面</h1><p>只展示KDE和GNOME，后面的进阶教程以KDE为主</p>
+<h2 id="KDE"><a href="#KDE" class="headerlink" title="KDE"></a>KDE</h2><p><strong>KDE桌面</strong></p>
+<p>安装plasma-meta元软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S plasma</span><br></pre></td></tr></table></figure>
+
+<p><strong>KDE应用和SDDM图形登录界面</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pacman -S kde-applications </span><br><span class="line">pacman -S sddm sddm-kcm</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装网络管理工具</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S networkmanager netctl</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>开启相关服务</strong></p>
+<p>此处需要root权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> NetworkManager     </span><br><span class="line">systemctl <span class="built_in">enable</span> sddm</span><br><span class="line">systemctl <span class="built_in">enable</span> dhcpcd</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot # 重启进入桌面</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>到这里恭喜你成功安装完桌面系统，赶快重启进入桌面吧！</p>
+</blockquote>
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://mrhuanhao.cn/2020/03/23/archlinuxdesktop/>https://mrhuanhao.cn/2020/03/23/archlinuxdesktop/</a></p>
+          
+        
+          
+            <p>转载时，请注明文章来源！！！</p>
+
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
+        
+          height='160px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/03/23/prettykde/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【MAC风】kde美化</p>
+                <p class='content'>【Mac风格kde】Archlinux美化教程本文章的教程会在bilibili录成视频版本
+关注我：Mrhuanhao
+
+安装全局主题打开设置，打开全局主题，然后点击【Get Now Globa...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/03/23/archlinuxsystem/'>
+                <p class='title'>【系统篇】ArchLinux系统安装<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>本教程为最新安装Linux的教程，想看更详细可以到我B站主页看视频教程本教程参考自 https://wiki.archlinux.org/index.php/Installation_guide...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '【桌面篇】ArchLinux安装kde桌面',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget grid blur desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation fixed">
+      
+        <a class="flat-box" title="/archives/" href="/archives/"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          归档
+        </a>
+      
+        <a class="flat-box" title="https://huanhao.cnblogs.com/" href="https://huanhao.cnblogs.com/"
+          
+          
+            target="_blank"
+          
+          id="https:huanhaocnblogscom">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          博客园
+        </a>
+      
+        <a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
+          
+          
+            target="_blank"
+          
+          id="https:hexocncn">
+          
+            <i class="fas fa-paperclip fa-fw" aria-hidden="true"></i>
+          
+          Hexo中文
+        </a>
+      
+        <a class="flat-box" title="/friends/" href="/friends/"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          友链
+        </a>
+      
+        <a class="flat-box" title="https://space.bilibili.com/67268239" href="https://space.bilibili.com/67268239"
+          
+          
+            target="_blank"
+          
+          id="https:spacebilibilicom67268239">
+          
+            <i class="fas fa-play-circle fa-fw" aria-hidden="true"></i>
+          
+          Bilibili
+        </a>
+      
+        <a class="flat-box" title="/about/" href="/about/"
+          
+          
+            target="_blank"
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget text blur desktop mobile">
+  
+  <header>
+    
+      <a href='https://github.com/kjhuanhao' target="_blank" rel="noopener"><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧！</span></a>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'><img style='width:20%' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/抱拳.gif'></p>
+
+    
+      <p>这是我的最新项目: Hexo中文站，您的赞对我来说很重要! 也欢迎新成员加入━(<em>｀∀´</em>)ノ亻!</p>
+
+    
+      <p><a href="https://github.com/kjhuanhao/hexocn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn/hexocn/h128.png" height="50px"></a></p>
+
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper blur desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#连接网络"><span class="toc-text">连接网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置新用户的sudo权限"><span class="toc-text">配置新用户的sudo权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#显卡类型"><span class="toc-text">显卡类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KDE"><span class="toc-text">KDE</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:2077780946@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/kjhuanhao/"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=471662004"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://mrhuanhao.cn/">Copyright © 2020 Mr. Huanhao</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/wallhaven-73kzee.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "hDOAA3mu7lwFQdm4dmnv3dns-gzGzoHsz",
+    appKey: "uEgPfcpSWrUpzsYwlyqvHgxY",
+    placeholder: "如果你有什么疑问或者吐槽，快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight: 'true',
+    mathJax: 'false'
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "[object Object]";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+</html>
