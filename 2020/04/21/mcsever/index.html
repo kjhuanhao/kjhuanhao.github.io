@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>归档：2020 - Huanhao&#39;s Blog</title>
+    <title>搭建我的世界服务器 - Huanhao&#39;s Blog</title>
   
+    <meta name="keywords" content="我的世界">
+  
+  
+    <meta name="description" content="近期终于想到闲置的服务器应该做什么了，于是有了这篇搭建我的世界服务器的教程（可怜我的服务器闲置了半年）本篇教程不适合服务器纯小白，不会给你解释一些命令之类的，如果你了解一些linux命令，那这篇教程是不吃力的">
   
 
   <!-- feed -->
@@ -82,99 +84,7 @@
 
 <body>
   
-  <div class="cover-wrapper">
-    
-      <cover class='cover  half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-    
-      <p class="title">Huanhao's Blog</p>
-    
-    
-      <p class="subtitle">彼方为谁,无我有问,九月露湿,待君之前</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="这里可以搜索文章哦！" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
-        
-          
-            <li>
-              <a class="nav home"
-                href="/"
-                
-                
-                id="home">
-                <i class='fas fa-home fa-fw'></i>&nbsp;主页
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://www.cnblogs.com/huanhao/"
-                
-                
-                  target="_blank"
-                
-                id="https:wwwcnblogscomhuanhao">
-                <i class='fas fa-book fa-fw'></i>&nbsp;博客园
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://space.bilibili.com/67268239"
-                
-                
-                  target="_blank"
-                
-                id="https:spacebilibilicom67268239">
-                <i class='fas fa-play-circle fa-fw'></i>&nbsp;B站
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://jq.qq.com/?_wv=1027&amp;k=5zxjzZz"
-                
-                
-                  target="_blank"
-                
-                id="https:jqqqcom?_wv=1027&amp;k=5zxjzZz">
-                <i class='fas fa-comments fa-fw'></i>&nbsp;交流群
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="/about/"
-                
-                
-                  target="_blank"
-                
-                id="about">
-                <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
-              </a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      </cover>
-    
-    <div id="loading-bar-wrapper">
+  <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow blur">
@@ -627,24 +537,18 @@
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper'>
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
   
+
+  
+    <article id="post" class="post white-box shadow blur article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -654,11 +558,13 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2020/03/23/markdown/">
-      【hexo博客进阶】1.Markdown语法
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/2020/04/21/mcsever/">
+        搭建我的世界服务器
+      </a>
+    </h1>
+  
 
 
         
@@ -678,6 +584,29 @@
             
           
             
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>服务器</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+          
+            
+              <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-21T22:06:23+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年4月21日</p>
+  </a>
+</div>
+
+            
           
             
               
@@ -693,743 +622,204 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果你想让你的博客，看起来更加美观，学习markdown是必要的，你不需要存在害怕的心理，因为markdown十分简单，就是记住几个符号就行了，不是你想象的他和学习编程语言一样复杂。</p>
-<p>在开始之前，我们需要一个markdown的编辑器，来帮助我们识别markdown的文本，我推荐你使用<strong><code>Typora</code></strong></p>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>近期终于想到闲置的服务器应该做什么了，于是有了这篇搭建我的世界服务器的教程（可怜我的服务器闲置了半年）本篇教程不适合服务器纯小白，不会给你解释一些命令之类的，如果你了解一些linux命令，那这篇教程是不吃力的</p>
+<a id="more"></a>
+
+<h2 id="我的服务器配置"><a href="#我的服务器配置" class="headerlink" title="我的服务器配置"></a>我的服务器配置</h2><p>我的服务器只是拿来3个人联机用的，所以这个配置应该是够了，如果是4人以上你需要更大的配置。</p>
+<ul>
+<li><p>操作系统：CentOS 7.6 64位</p>
+</li>
+<li><p>CPU：1核</p>
+</li>
+<li><p>内存：1GB</p>
+</li>
+<li><p>公网带宽： 1Mbps</p>
+</li>
+</ul>
+<h2 id="连接服务器"><a href="#连接服务器" class="headerlink" title="连接服务器"></a>连接服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@ip</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p><strong>Centos7</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install java-1.8.0-openjdk</span><br></pre></td></tr></table></figure>
+
+<p><strong>ubuntu</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+
+<h3 id="检测是否成功"><a href="#检测是否成功" class="headerlink" title="检测是否成功"></a>检测是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h2><p>宝塔的安装教程请到官网查看</p>
+<span class='btn center large'><a href='https://www.bt.cn/bbs/thread-19376-1-1.html' target="_blank" rel="noopener" title='安装教程'><i class='fas fa-download'></i>安装教程</a></span>
+
+<h2 id="部署MC服务器"><a href="#部署MC服务器" class="headerlink" title="部署MC服务器"></a>部署MC服务器</h2><h3 id="创建Minecraft游戏运行目录"><a href="#创建Minecraft游戏运行目录" class="headerlink" title="创建Minecraft游戏运行目录"></a>创建Minecraft游戏运行目录</h3><p>设置<code>Minecraft</code>的运行路径：<br>打开宝塔面板，进入<code>文件-根目录-新建目录-输入你想取的名称-确定创建</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn@master/2020/04/21/47f3f61f26de9b7316a8a3716d8d22b0.png" alt=""></p>
+<h3 id="下载服务文件"><a href="#下载服务文件" class="headerlink" title="下载服务文件"></a>下载服务文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /MC</span><br><span class="line">sudo wget https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p><a href="https://www.typora.io/" target="_blank" rel="noopener">https://www.typora.io/</a></p>
+<p>如果你没有<code>wget</code>可以使用你的包管理命令下载安装</p>
 </blockquote>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/markdown/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalled.servce</span><br></pre></td></tr></table></figure>
 
+<div class="note warning">
+            <p>阿里云的服务器还需要在阿里后台，放行<code>25565</code>端口</p>
           </div>
+
+<h2 id="运行Minecraft以及配置服务器"><a href="#运行Minecraft以及配置服务器" class="headerlink" title="运行Minecraft以及配置服务器"></a>运行Minecraft以及配置服务器</h2><p>自己查看一下，下载下来的文件叫什么<br><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn@master/2020/04/21/3f9d715a4cbad6202b6cd13c0305e74e.png" alt="">我是<code>server.jar</code></p>
+<p>下面的命令对应的地方改为你下载下来的文件名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1500M -Xms666M -jar server.jar</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>1.Xms666是服务器k启动所占最大（运行）内存，Xmx1500是服务器正常运行最大内存<br>2.我游戏路径是/MC是路径，即<strong>pwd后的路径</strong><br>这个时候，<strong><em>如果你是第一次运行，是会报错的，请继续往下看</em></strong></p>
+<h2 id="同意用户许可文件eulaw-txt"><a href="#同意用户许可文件eulaw-txt" class="headerlink" title="同意用户许可文件eulaw.txt"></a>同意用户许可文件eulaw.txt</h2><p>这是报错信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://i.loli.net/2020/04/21/EoXhjUDt3TyFpKR.png" alt="Snipaste_2020-04-21_21-46-57.png"></p>
+<p>我这里使用vi进行修改，你也可以去宝塔修改</p>
+<p>在Minecraft运行路径下，终端输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi eula.txt</span><br></pre></td></tr></table></figure>
+
+<p>把<code>eula=false</code>,改为<code>eula=true</code></p>
+<hr>
+<p>此时你再执行,就可以了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1500M -Xms666M -jar server.jar</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何进入服务器"><a href="#如何进入服务器" class="headerlink" title="如何进入服务器"></a>如何进入服务器</h2><p>连接服务器的格式如下</p>
+<p>注意符号是英文</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip:25565</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止服务器"><a href="#停止服务器" class="headerlink" title="停止服务器"></a>停止服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stop</span><br></pre></td></tr></table></figure>
+
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
         
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://mrhuanhao.cn/2020/04/21/mcsever/>https://mrhuanhao.cn/2020/04/21/mcsever/</a></p>
+          
+        
+          
+            <p>转载时，请注明文章来源！！！</p>
+
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
       
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
         
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
+          height='160px'
+        ></div>
+      
+    
+  </div>
+</section>
+
   
 
 
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/prettykde/">
-      【MAC风】kde美化
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
             
           
         </div>
         
-          <hr>
-        
-      </div>
-    
-  </section>
+          
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
       
-        <h1 id="【Mac风格kde】Archlinux美化教程"><a href="#【Mac风格kde】Archlinux美化教程" class="headerlink" title="【Mac风格kde】Archlinux美化教程"></a>【Mac风格kde】Archlinux美化教程</h1><p>本文章的教程会在bilibili录成视频版本</p>
-<p>关注我：Mrhuanhao</p>
+        
+          
+
+        
       
     </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/prettykde/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
   </section>
-</article>
 
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/04/15/gh-proxy/'>
+                <p class='title'>gh-proxy<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'></p>
+              </a>
+            
           </div>
         
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
   
 
 
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/archlinuxdesktop/">
-      【桌面篇】ArchLinux安装kde桌面
-    </a>
-  </h2>
 
 
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-            
-          
-            
-          
-            
-              
 
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
 
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>为你的arch安装kde桌面</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/archlinuxdesktop/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/archlinuxsystem/">
-      【系统篇】ArchLinux系统安装
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本教程为最新安装Linux的教程，想看更详细可以到我B站主页看视频教程<br>本教程参考自 <a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Installation_guide</a><br>本教程于2019.11.9日编写，请根据查阅时间参考本教程（官网安装方式未更新，则本教程保持最新状态）<br>教程中的镜像更新时间：2019.11.01</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/archlinuxsystem/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/binary/">
-      关于常见进制的转换
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>了解进制之间是如何进行转换的</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/binary/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/picgo/">
-      【pic+js+gh】免费高速图床方案
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>搭建一个自己的免费图床工具</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/picgo/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/manjaro-i3/">
-      manajro-i3wm
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这本来是我的一个视频稿子，但是忽然不想去做了，就放出这个稿子</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/manjaro-i3/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/configvim/">
-      【教程向】配置属于自己的vim
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>拥有一个自己的vim配置</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/configvim/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/learnvim/">
-      【最简单的vim教程】vim学习笔记-基础操作
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Vim基础操作</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/learnvim/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow blur reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/03/23/usegit/">
-      【快速上手】Git的使用
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://mrhuanhao.cn/" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/myimg/huanhao.jpg">
-    <p>Huanhao</p>
-  </a>
-</div>
-
-            
-          
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>让你快速上手Git</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/03/23/usegit/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2020/">
-            <section class="post prev white-box shadow blur" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 3
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2020/page/3/">
-            <section class="post next white-box shadow blur">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-      <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-    processEscapes: true,
-    tags: "ams",
-    macros: {
-      href: "{}"
+  <script>
+    window.subData = {
+      title: '搭建我的世界服务器',
+      tools: true
     }
-  },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|dno",
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  }
-};
-</script>
-
-    
-
-  
+  </script>
 
 
-	
 </div>
 <aside class='l_side'>
   
@@ -1527,71 +917,6 @@ window.MathJax = {
     
     
 
-<section class="widget blogger blur desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Huanhao's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="mailto:2077780946@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://github.com/kjhuanhao/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=471662004"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
 <section class="widget text blur desktop mobile">
   
   <header>
@@ -1621,60 +946,21 @@ window.MathJax = {
     
     
 
-<section class="widget qrcode blur desktop">
-  
+
+  <section class="widget toc-wrapper blur desktop mobile">
+    
   <header>
     
-      <i class="fas fa-mobile fa-fw" aria-hidden="true"></i><span class='name'>~在线乞讨~</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content article-entry'>
-    
-      
-        <img src='https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/payme/swechatpay.png'
-        >
-      
-    
-  </div>
-</section>
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#我的服务器配置"><span class="toc-text">我的服务器配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接服务器"><span class="toc-text">连接服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖"><span class="toc-text">安装依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#检测是否成功"><span class="toc-text">检测是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装宝塔"><span class="toc-text">安装宝塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署MC服务器"><span class="toc-text">部署MC服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Minecraft游戏运行目录"><span class="toc-text">创建Minecraft游戏运行目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载服务文件"><span class="toc-text">下载服务文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关闭防火墙"><span class="toc-text">关闭防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行Minecraft以及配置服务器"><span class="toc-text">运行Minecraft以及配置服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同意用户许可文件eulaw-txt"><span class="toc-text">同意用户许可文件eulaw.txt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何进入服务器"><span class="toc-text">如何进入服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#停止服务器"><span class="toc-text">停止服务器</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
-  
-
-  
-    
-    
-
-<section class="widget list blur desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i><span class='name'>近期公告</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation">
-      
-        <li><a class="flat-box" title="https://hexocn.cn/" href="https://hexocn.cn/"
-          
-          
-          id="https:hexocncn"
-          >
-          <div class='name'>
-            
-              <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-            
-            点我访问Hexo中文站
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
 
   
 
@@ -1773,35 +1059,6 @@ window.MathJax = {
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
-	    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-    processEscapes: true,
-    tags: "ams",
-    macros: {
-      href: "{}"
-    }
-  },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|dno",
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  }
-};
-</script>
-
-	
 
 
       <script>setLoadingBarProgress(60);</script>
@@ -1903,6 +1160,33 @@ window.MathJax = {
 
 
 
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "hDOAA3mu7lwFQdm4dmnv3dns-gzGzoHsz",
+    appKey: "uEgPfcpSWrUpzsYwlyqvHgxY",
+    placeholder: "如果你有什么疑问或者吐槽，快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight: 'true',
+    mathJax: 'false'
+  })
+  </script>
 
 
 

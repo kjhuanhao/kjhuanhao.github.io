@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建我的世界服务器</title>
+      <link href="/2020/04/21/mcsever/"/>
+      <url>/2020/04/21/mcsever/</url>
+      
+        <content type="html"><![CDATA[<p>近期终于想到闲置的服务器应该做什么了，于是有了这篇搭建我的世界服务器的教程（可怜我的服务器闲置了半年）本篇教程不适合服务器纯小白，不会给你解释一些命令之类的，如果你了解一些linux命令，那这篇教程是不吃力的</p><a id="more"></a><h2 id="我的服务器配置"><a href="#我的服务器配置" class="headerlink" title="我的服务器配置"></a>我的服务器配置</h2><p>我的服务器只是拿来3个人联机用的，所以这个配置应该是够了，如果是4人以上你需要更大的配置。</p><ul><li><p>操作系统：CentOS 7.6 64位</p></li><li><p>CPU：1核</p></li><li><p>内存：1GB</p></li><li><p>公网带宽： 1Mbps</p></li></ul><h2 id="连接服务器"><a href="#连接服务器" class="headerlink" title="连接服务器"></a>连接服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@ip</span><br></pre></td></tr></table></figure><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p><strong>Centos7</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install java-1.8.0-openjdk</span><br></pre></td></tr></table></figure><p><strong>ubuntu</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure><h3 id="检测是否成功"><a href="#检测是否成功" class="headerlink" title="检测是否成功"></a>检测是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure><h2 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h2><p>宝塔的安装教程请到官网查看</p><span class='btn center large'><a href='https://www.bt.cn/bbs/thread-19376-1-1.html' target="_blank" rel="noopener" title='安装教程'><i class='fas fa-download'></i>安装教程</a></span><h2 id="部署MC服务器"><a href="#部署MC服务器" class="headerlink" title="部署MC服务器"></a>部署MC服务器</h2><h3 id="创建Minecraft游戏运行目录"><a href="#创建Minecraft游戏运行目录" class="headerlink" title="创建Minecraft游戏运行目录"></a>创建Minecraft游戏运行目录</h3><p>设置<code>Minecraft</code>的运行路径：<br>打开宝塔面板，进入<code>文件-根目录-新建目录-输入你想取的名称-确定创建</code></p><p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn@master/2020/04/21/47f3f61f26de9b7316a8a3716d8d22b0.png" alt=""></p><h3 id="下载服务文件"><a href="#下载服务文件" class="headerlink" title="下载服务文件"></a>下载服务文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /MC</span><br><span class="line">sudo wget https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar</span><br></pre></td></tr></table></figure><blockquote><p>如果你没有<code>wget</code>可以使用你的包管理命令下载安装</p></blockquote><h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalled.servce</span><br></pre></td></tr></table></figure><div class="note warning">            <p>阿里云的服务器还需要在阿里后台，放行<code>25565</code>端口</p>          </div><h2 id="运行Minecraft以及配置服务器"><a href="#运行Minecraft以及配置服务器" class="headerlink" title="运行Minecraft以及配置服务器"></a>运行Minecraft以及配置服务器</h2><p>自己查看一下，下载下来的文件叫什么<br><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://cdn.jsdelivr.net/gh/kjhuanhao/thecdn@master/2020/04/21/3f9d715a4cbad6202b6cd13c0305e74e.png" alt="">我是<code>server.jar</code></p><p>下面的命令对应的地方改为你下载下来的文件名</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1500M -Xms666M -jar server.jar</span><br></pre></td></tr></table></figure><p>注意：<br>1.Xms666是服务器k启动所占最大（运行）内存，Xmx1500是服务器正常运行最大内存<br>2.我游戏路径是/MC是路径，即<strong>pwd后的路径</strong><br>这个时候，<strong><em>如果你是第一次运行，是会报错的，请继续往下看</em></strong></p><h2 id="同意用户许可文件eulaw-txt"><a href="#同意用户许可文件eulaw-txt" class="headerlink" title="同意用户许可文件eulaw.txt"></a>同意用户许可文件eulaw.txt</h2><p>这是报错信息</p><p><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/blog/load.gif" data-original="https://i.loli.net/2020/04/21/EoXhjUDt3TyFpKR.png" alt="Snipaste_2020-04-21_21-46-57.png"></p><p>我这里使用vi进行修改，你也可以去宝塔修改</p><p>在Minecraft运行路径下，终端输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi eula.txt</span><br></pre></td></tr></table></figure><p>把<code>eula=false</code>,改为<code>eula=true</code></p><hr><p>此时你再执行,就可以了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1500M -Xms666M -jar server.jar</span><br></pre></td></tr></table></figure><h2 id="如何进入服务器"><a href="#如何进入服务器" class="headerlink" title="如何进入服务器"></a>如何进入服务器</h2><p>连接服务器的格式如下</p><p>注意符号是英文</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip:25565</span><br></pre></td></tr></table></figure><h3 id="停止服务器"><a href="#停止服务器" class="headerlink" title="停止服务器"></a>停止服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stop</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 我的世界 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gh-proxy</title>
       <link href="/2020/04/15/gh-proxy/"/>
       <url>/2020/04/15/gh-proxy/</url>
